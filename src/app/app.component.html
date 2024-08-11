@@ -1,5 +1,7 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
   <div class="container">
+    <h4 appClass [backgroundColor]=" 'red' " ]>{{images[currentPage].title}}</h4>
+    <img [ngSrc]="images[currentPage].url"  height="400px" width="400px" alt="">
     <!-- Your content here -->
       <nav aria-label="Page navigation example">
         <ul class="pagination">
@@ -25,17 +27,17 @@
 </div>
 
 
-<div [ngSwitch]="currentPage">
-    <div *ngSwitchCase="0">
-        <h1 style="color: black">Current page is 0 </h1>
-    </div>
-    <div *ngSwitchCase="1">
-        <h1 style="color: black">Current page is 1 </h1>
-    </div>
-    <div *ngSwitchCase="2">
-        <h1 style="color: black">Current page is 2 </h1>
-    </div>
-    <div *ngSwitchCase="3">
-        <h1 style="color: black">Current page is 3 </h1>
-    </div>
-</div>
+<!--<div [ngSwitch]="currentPage">-->
+<!--    <div *ngSwitchCase="0">-->
+<!--        <h1 style="color: black">Current page is 0 </h1>-->
+<!--    </div>-->
+<!--    <div *ngSwitchCase="1">-->
+<!--        <h1 style="color: black">Current page is 1 </h1>-->
+<!--    </div>-->
+<!--    <div *ngSwitchCase="2">-->
+<!--        <h1 style="color: black">Current page is 2 </h1>-->
+<!--    </div>-->
+<!--    <div *ngSwitchCase="3">-->
+<!--        <h1 style="color: black">Current page is 3 </h1>-->
+<!--    </div>-->
+<!--</div>-->
