@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NgClass, NgForOf} from "@angular/common";
+import {NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgClass],
+  imports: [RouterOutlet, NgForOf, NgClass, NgIf, NgSwitch, NgSwitchCase],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -29,4 +29,8 @@ export class AppComponent {
             url: 'https://images.unsplash.com/photo-1721332154161-847851ea188b?q=80&w=3435&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         },
     ];
+
+  checkWindowIndex(index: number) {
+    return Math.abs(this.currentPage - index) < 5;
+  }
 }
