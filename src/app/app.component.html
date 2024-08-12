@@ -9,7 +9,7 @@
             [appClass]="{disabled: currentPage === 0}" class="page-item">
             <a (click)="currentPage = currentPage - 1" class="page-link">Prev</a>
           </li>
-            <ng-container  *ngFor="let image of images; let i = index;" >
+            <ng-container *appTimes="images.length; let i = index">
               <li (click)="currentPage = i"
                   [appClass]="{active: i === currentPage}"
                   *ngIf="checkWindowIndex(i)"
