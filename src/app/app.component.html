@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
   <div class="container">
-    <h4 appClass [backgroundColor]=" 'red' " ]>{{images[currentPage].title}}</h4>
+    <h4 appClass [backgroundColor]="'orange'">{{images[currentPage].title}}</h4>
     <img [ngSrc]="images[currentPage].url"  height="400px" width="400px" alt="">
     <!-- Your content here -->
       <nav aria-label="Page navigation example">
@@ -25,7 +25,6 @@
       </nav>
   </div>
 </div>
-
 
 <!--<div [ngSwitch]="currentPage">-->
 <!--    <div *ngSwitchCase="0">-->

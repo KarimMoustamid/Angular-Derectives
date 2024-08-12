@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input, input} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgClass, NgForOf, NgIf, NgOptimizedImage, NgSwitch, NgSwitchCase} from "@angular/common";
 import {ClassDirective} from "./class.directive";
@@ -11,6 +11,7 @@ import {ClassDirective} from "./class.directive";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   currentPage = 0;
     images = [
         {
