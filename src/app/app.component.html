@@ -1,23 +1,23 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
   <div class="container">
-    <h4 appClass [backgroundColor]="'orange'">{{images[currentPage].title}}</h4>
+    <h4 [appClass]="">{{images[currentPage].title}}</h4>
     <img [ngSrc]="images[currentPage].url"  height="400px" width="400px" alt="">
     <!-- Your content here -->
       <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li
-            [ngClass]="{disabled: currentPage === 0}" class="page-item">
+            [appClass]="{disabled: currentPage === 0}" class="page-item">
             <a (click)="currentPage = currentPage - 1" class="page-link">Prev</a>
           </li>
             <ng-container  *ngFor="let image of images; let i = index;" >
               <li (click)="currentPage = i"
-                  [ngClass]="{active: i === currentPage}"
+                  [appClass]="{active: i === currentPage}"
                   *ngIf="checkWindowIndex(i)"
                  class="page-item">
                 <a class="page-link" href="#">{{ i + 1 }}</a></li>
             </ng-container>
           <li
-            [ngClass]="{disabled: currentPage === images.length - 1}"
+            [appClass]="{disabled: currentPage === images.length - 1}"
             class="page-item">
             <a (click)="currentPage = currentPage + 1" class="page-link">Next</a>
           </li>
